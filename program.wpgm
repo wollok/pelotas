@@ -1,0 +1,23 @@
+import wollok.game.*
+
+import pelotas.*
+
+program LasPelotas {
+	game.title("pelotas")
+	game.height(10)
+	game.width(10)
+
+	
+	game.addVisual(lionel)
+	game.addVisual(manager)
+
+	keyboard.left().onPressDo { lionel.izquierda() }
+	keyboard.right().onPressDo { lionel.derecha() }
+
+
+	game.onCollideDo( lionel, {pelota => lionel.impacto(pelota)} )
+	pelotas.addOnTick()
+	game.onTick(7000, "VELOCIDAD", {pelotas.aumentarVelocidad()})
+
+	game.start()
+}
