@@ -20,7 +20,7 @@ Para removerla se podría hacer con:
 Esos comandos son en realidad wrappers de npm, por lo que es necesario que npm esté instalado.
 - sync es un wrapper de install
 - add es un wrapper de install <lib>
-- remove eun wrapper de remove <lib>
+- remove es un wrapper de uninstall <lib>
 
 Se puede agregar versiones de la misma manera que npm.
 
